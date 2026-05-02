@@ -6,15 +6,14 @@ import GObject from 'gi://GObject';
 
 import * as Constants from './constants.js';
 
-import {AboutPage} from './settings/aboutPage.js';
-import {DonatePage} from './settings/donatePage.js';
-import {GeneralPage} from './settings/generalPage.js';
-import {MenuButtonPage} from './settings/menuButtonPage.js';
-import {MenuPage} from './settings/menuPage.js';
+import { AboutPage } from './settings/aboutPage.js';
+import { GeneralPage } from './settings/generalPage.js';
+import { MenuButtonPage } from './settings/menuButtonPage.js';
+import { MenuPage } from './settings/menuPage.js';
 
-import {IconGroup} from './settings/iconChooserDialog.js';
+import { IconGroup } from './settings/iconChooserDialog.js';
 
-import {ExtensionPreferences, gettext as _} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
+import { ExtensionPreferences, gettext as _ } from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
 const IconDataItem = GObject.registerClass({
     Properties: {
@@ -22,7 +21,7 @@ const IconDataItem = GObject.registerClass({
         'icon-string': GObject.ParamSpec.string('icon-string', 'Icon String', 'Icon String', GObject.ParamFlags.READWRITE, ''),
         'group': GObject.ParamSpec.int('group', 'Group', 'Group', GObject.ParamFlags.READWRITE, 0, 3, IconGroup.ALL),
     },
-}, class Item extends GObject.Object {});
+}, class Item extends GObject.Object { });
 
 export default class ArcMenuPrefs extends ExtensionPreferences {
     constructor(metadata) {
@@ -54,7 +53,7 @@ export default class ArcMenuPrefs extends ExtensionPreferences {
         let pinnedAppsChangedId = settings.connect('changed::pinned-apps', () => {
             for (const page of window.pages) {
                 if (page instanceof MenuPage) {
-                    const {settingPage} = page.pinnedAppsRow;
+                    const { settingPage } = page.pinnedAppsRow;
                     settingPage.updatePinnedApps();
                 }
             }
@@ -113,10 +112,6 @@ export default class ArcMenuPrefs extends ExtensionPreferences {
         const menuButtonPage = new MenuButtonPage(settings);
         window.add(menuButtonPage);
         window.pages.push(menuButtonPage);
-
-        const donatePage = new DonatePage(this.metadata);
-        window.add(donatePage);
-        window.pages.push(donatePage);
 
         const aboutPage = new AboutPage(settings, this.metadata, this.path);
         window.add(aboutPage);

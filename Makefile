@@ -1,10 +1,10 @@
 .PHONY: all clean extension potfile install prefs enable disable reset info show updatepo zip-file
 
-GETTEXT_DOMAIN = arcmenu
-NAME = ArcMenu
-RESOURCES_PATH = /org/gnome/shell/extensions/arcmenu
-SETTINGS_SCHEMA = org.gnome.shell.extensions.arcmenu
-UUID = arcmenu@arcmenu.com
+GETTEXT_DOMAIN = yarlmenu
+NAME = yarlmenu
+RESOURCES_PATH = /org/gnome/shell/extensions/yarlmenu
+SETTINGS_SCHEMA = org.gnome.shell.extensions.yarlmenu
+UUID = yarlmenu@yarlos-project.github.com
 
 # Files and directories to build into extension.
 # src/* flattens the src directory to root.
