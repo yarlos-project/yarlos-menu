@@ -1,7 +1,7 @@
 .PHONY: all clean extension potfile install prefs enable disable reset info show updatepo zip-file
 
 GETTEXT_DOMAIN = yarlmenu
-NAME = yarlmenu
+NAME = Start Menu
 RESOURCES_PATH = /org/gnome/shell/extensions/yarlmenu
 SETTINGS_SCHEMA = org.gnome.shell.extensions.yarlmenu
 UUID = yarlmenu@yarlos-project.github.com
