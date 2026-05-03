@@ -1,68 +1,84 @@
-![](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/ArcMenu_WideBanner.png)
-
------
-
-![](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/ArcMenu_Banner.png)
-
------
-
 ### Introduction
 
-ArcMenu is an application menu for GNOME Shell, designed to provide a more familiar user experience and workflow. This extension has many features, including various menu layout styles, GNOME search, quick access to system shortcuts, and much more!
+Start Menu is an application menu for GNOME Shell, designed to provide a more familiar user experience and workflow. This extension has many features, including various menu layout styles, GNOME search, quick access to system shortcuts, and much more!
 
-**For ArcMenu to work properly, you may need [these dependencies](https://gitlab.com/arcmenu/ArcMenu/-/wikis/ArcMenu-Dependencies).**
+Modification Notice: This package is a downstream-modified build of the upstream ArcMenu extension. The changes may differ from the upstream project. The upstream license and copyright notices remain in effect.
 
------
-
-### Help Support This Project
-
-Thank you for using ArcMenu! If you enjoy it and would like to help support its continued development, please consider making a donation. Your support, no matter the amount, makes a big difference.
-
-[![Donate via Paypal](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/paypal-badge.svg){width=170}](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=53CWA7NR743WC&item_name=Support+ArcMenu&currency_code=USD&source=url) [![Buy My a Coffee](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/bmc-badge.svg){width=170}](https://buymeacoffee.com/azaech)
-
-
------
+---
 
 ### Installation
 
-#### Visit the [GNOME Extensions](https://extensions.gnome.org/extension/3628/arcmenu/) website to install the most recent release of ArcMenu.
+#### Dependencies
 
-- **To install ArcMenu from source**: Please see the [Install From Source wiki Guide](https://gitlab.com/arcmenu/ArcMenu/-/wikis/Install-From-Source-Guide).
+Before installing, make sure the following tools are available on your system:
 
-<p align="left">
-       <a href="https://extensions.gnome.org/extension/3628/arcmenu/" >
-    <img src="https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/get-it-ego.png" width="240" style="margin-left: 4px"/>
-    </a>
+- `git`
+- `make`
+- `glib-compile-schemas`
+- `gnome-extensions`
+- `gettext` (for localization support, if you want to build translations)
+
+#### Manual Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/yarlos-project/yarlos-menu.git
+   cd yarlos-menu
+   ```
+
+2. **Build the extension:**
+
+   ```bash
+   make
+   ```
+
+3. **Install the extension:**
+
+   ```bash
+   make install
+   ```
+
+4. **Enable the extension:**
+
+   ```bash
+   make enable
+   ```
+
+5. **Restart GNOME Shell:**
+   - Press `Alt+F2`, type `r`, and press Enter
+   - Or log out and log back in
 
 -----
 
 ### Credits
 
-**@[AndrewZaech](https://gitlab.com/AndrewZaech)** (2019 - current) Project Maintainer and Developer
+Start Menu is maintained by the YarlOS Project.
 
-**@[AndyC](https://gitlab.com/LinxGem33)** (2017 - 2020) ArcMenu Founder, Former Maintainer, Digital Art Designer
+**Original Credits**
 
-**@[Alexander Rüedlinger](https://github.com/lexruee)** (2017) - Former Developer
+- The 'ArcMenu' layout design is inspired by the Zorin OS menu extension.
+- ArcMenu utilizes various code from GNOME Shell and the GNOME Shell extensions package.
+- ArcMenu Logo and other icon assets created by [AndyC](https://gitlab.com/LinxGem33). Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+- Fallback Category Icons
+  - [Ubuntu Yaru Icons](https://github.com/ubuntu/yaru) licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+  - [MoreWaita](https://github.com/somepaulo/MoreWaita) [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-**Additional Credits**:
-* The 'ArcMenu' layout design is insipired by the Zorin OS menu extension.
-* ArcMenu utilizes various code from GNOME Shell and the GNOME Shell extensions package.
-* ArcMenu Logo and other ArcMenu icon assets created by [AndyC](https://gitlab.com/LinxGem33). Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
-* Fallback Category Icons
-    * [Ubuntu Yaru Icons](https://github.com/ubuntu/yaru) licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
-    * [MoreWaita](https://github.com/somepaulo/MoreWaita) [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
+**Original Project**
 
------
+- @[AndrewZaech](https://gitlab.com/AndrewZaech) (2019 - 2026) - Original Project Maintainer and Developer
+- @[AndyC](https://gitlab.com/LinxGem33) (2017 - 2020) - ArcMenu Founder, Former Maintainer, Digital Art Designer
+- @[Alexander Rüedlinger](https://github.com/lexruee) (2017) - Former Developer
 
-### History
-
-ArcMenu was first released in 2017 by [AndyC](https://gitlab.com/LinxGem33). The original ArcMenu project can be found [here](https://gitlab.com/LinxGem33/Arc-Menu).
-
-In 2017, ArcMenu _started_ as a fork of the Zorin menu extension by Zorin OS. As it's own separate project, ArcMenu rapidly began developing innovative features and quickly diverged away from Zorin menu thanks to the works of [AndyC](https://gitlab.com/LinxGem33) (2017 - 2020), [AndrewZaech](https://gitlab.com/AndrewZaech) (2019 - current), [Alexander Rüedlinger](https://github.com/lexruee) (2017), and other contributors. ArcMenu has been rewritten from the ground up since it's inception and has it's own separate, original, and unique code base, unrelated to that of Zorin menu.
-
------
+---
 
 ### Contributors
+
+**Start Menu**
+
+- Maintained by [yarlos-project](https://github.com/yarlos-project)
+
+**Original ArcMenu Contributors**
 
 **@[Thomas Ingvarsson](https://gitlab.com/tingvarsson)** | **@[fishears](https://github.com/fishears)** | **@[JasonLG1979](https://github.com/JasonLG1979)** | **@[itmitica](https://github.com/itmitica)** | **@[vikaig](https://gitlab.com/vikaig)** | **@[MagneFire](https://gitlab.com/MagneFire)**
 
@@ -116,7 +132,9 @@ In 2017, ArcMenu _started_ as a fork of the Zorin menu extension by Zorin OS. As
 
 ### License & Terms
 
-ArcMenu is available under the terms of the GPL-2.0 license See [`COPYING`](https://gitlab.com/arcmenu/ArcMenu/blob/master/COPYING) for details.
+Start Menu is available under the terms of the GPL-2.0 license. See [`COPYING`](https://github.com/yarlos-project/yarlos-menu/blob/master/COPYING) for details.
+
+**Original ArcMenu** is available under the GPL-2.0 license. See the [upstream repository](https://gitlab.com/arcmenu/ArcMenu) for details.
 
 -----
 

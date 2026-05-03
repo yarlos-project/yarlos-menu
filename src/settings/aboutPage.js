@@ -22,7 +22,7 @@ const getGioUnixOutputStream = async () => {
 const GioUnixOutputStream = await getGioUnixOutputStream();
 
 export const AboutPage = GObject.registerClass(
-    class ArcMenuAboutPage extends Adw.PreferencesPage {
+    class YarlMenuAboutPage extends Adw.PreferencesPage {
         _init(settings, metadata, path) {
             super._init({
                 title: _('About'),
@@ -187,11 +187,11 @@ export const AboutPage = GObject.registerClass(
             // -----------------------------------------------------------------------
 
             // Links -----------------------------------------------------------------
-            /* TRANSLATORS: 'PROJECT_NAME' on GitLab*/
-            const gitlabRow = this._createLinkRow(_('%s on GitLab').format(PROJECT_NAME), `${metadata.url}`);
+            /* TRANSLATORS: 'PROJECT_NAME' on GitHub*/
+            const gitlabRow = this._createLinkRow(_('%s on GitHub').format(PROJECT_NAME), `${metadata.url}`);
             infoGroup.add(gitlabRow);
 
-            const reportIssueRow = this._createLinkRow(_('Report an Issue'), `${metadata.url}/-/issues`);
+            const reportIssueRow = this._createLinkRow(_('Report an Issue'), `${metadata.url}/issues`);
             infoGroup.add(reportIssueRow);
             // -----------------------------------------------------------------------
 
@@ -269,7 +269,9 @@ export const AboutPage = GObject.registerClass(
                 title: _('Brought to you by'),
             });
             creditsPage.add(codeByGroup);
-            const creditsRow1 = this._createLinkRow('Andrew Zaech (2019 - current)', 'https://gitlab.com/AndrewZaech', 'ArcMenu maintainer and developer');
+            const yarlOSRow = this._createLinkRow('YarlOS Project (2026 - current)', 'https://github.com/yarlos-project', 'Start Menu maintainer');
+            codeByGroup.add(yarlOSRow);
+            const creditsRow1 = this._createLinkRow('Andrew Zaech (2019 - 2026)', 'https://gitlab.com/AndrewZaech', 'ArcMenu original maintainer and developer');
             codeByGroup.add(creditsRow1);
             const creditsRow2 = this._createLinkRow('Andy C (2017 - 2020)', 'https://gitlab.com/LinxGem33', 'ArcMenu founder, maintainer, and digital art designer');
             codeByGroup.add(creditsRow2);
