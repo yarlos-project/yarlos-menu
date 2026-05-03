@@ -32,7 +32,7 @@ export const AboutPage = GObject.registerClass(
 
             const PROJECT_NAME = _('Start Menu');
             const PROJECT_DESCRIPTION = _('Start Menu Extension for GNOME');
-            const PROJECT_IMAGE = 'settings-yarlmenu-logo';
+            const PROJECT_IMAGE = 'settings-arcmenu-logo';
             const SCHEMA_PATH = '/org/gnome/shell/extensions/yarlmenu/';
             const VERSION = metadata['version-name'] ? metadata['version-name'] : metadata.version.toString();
 
